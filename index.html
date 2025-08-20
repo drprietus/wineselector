@@ -1,6 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Customizer / Personalizador de Vinos</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the app's theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #4A2E2E;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Styling for custom radio and checkbox selections */
+        .custom-checkbox:checked {
+            background-color: #8C2D2D;
+            border-color: #8C2D2D;
+        }
+        .custom-checkbox:checked + label {
+            color: #8C2D2D;
+            font-weight: 600;
+        }
+        .custom-radio:checked + label {
+            border-color: #8C2D2D;
+            background-color: #FDFBF7;
+            color: #8C2D2D;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        /* Fade-in animation for the summary section */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Active state for language buttons */
+        .lang-btn.active {
+            background-color: #8C2D2D;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-[#FDFBF7] min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <main class="w-full max-w-4xl mx-auto bg-white/50 backdrop-blur-sm rounded-2xl shadow-2xl shadow-amber-900/10 overflow-hidden relative">
+        <!-- Language Switcher -->
+        <div class="absolute top-4 right-4 z-10">
+            <button id="lang-en" class="lang-btn font-semibold py-1 px-3 rounded-l-md border border-r-0 border-[#8C2D2D] transition-colors duration-300">EN</button>
+            <button id="lang-es" class="lang-btn font-semibold py-1 px-3 rounded-r-md border border-[#8C2D2D] transition-colors duration-300">ES</button>
+        </div>
+
+        <div class="p-8 sm:p-12">
+            <!-- Introduction Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-[#4A2E2E] mb-4" data-key="title">Design Your Perfect Wine</h1>
+                <p class="text-lg text-[#6B4F4F] max-w-2xl mx-auto" data-key="intro">
+                    Welcome to your personal wine cellar. A great wine is a story in a bottle, and here you get to be the author. Select the characteristics you desire, and we'll craft a description of the wine that's perfectly suited to your palate.
+                </p>
+            </div>
+
+            <!-- Customization Section -->
+            <div id="customization-section" class="space-y-12">
+                <!-- Step 1: Body -->
+                <div>
+                    <h2 class="text-2xl font-bold text-[#4A2E2E] border-b-2 border-[#D4B996] pb-2 mb-6" data-key="step1Title">Step 1: Choose the Body</h2>
+                    <p class="text-[#6B4F4F] mb-6" data-key="step1Desc">The body describes the weight and feel of the wine in your mouth. Think of it like the difference between skim milk, 2% milk, and whole milk.</p>
+                    <div id="body-options" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="relative">
+                            <input type="radio" id="light-body" name="body" value="Light-Bodied" class="custom-radio absolute opacity-0 w-0 h-0">
+                            <label for="light-body" class="block w-full text-center p-6 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-[#8C2D2D]">
+                                <span class="text-xl font-semibold" data-key="bodyLight">Light-Bodied</span>
+                                <span class="block text-sm text-[#6B4F4F] mt-2" data-key="bodyLightDesc">Crisp, delicate, and refreshing.</span>
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input type="radio" id="medium-body" name="body" value="Medium-Bodied" class="custom-radio absolute opacity-0 w-0 h-0" checked>
+                            <label for="medium-body" class="block w-full text-center p-6 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-[#8C2D2D]">
+                                <span class="text-xl font-semibold" data-key="bodyMedium">Medium-Bodied</span>
+                                <span class="block text-sm text-[#6B4F4F] mt-2" data-key="bodyMediumDesc">Smooth, balanced, and versatile.</span>
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input type="radio" id="full-body" name="body" value="Full-Bodied" class="custom-radio absolute opacity-0 w-0 h-0">
+                            <label for="full-body" class="block w-full text-center p-6 border-2 border-gray-200 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-[#8C2D2D]">
+                                <span class="text-xl font-semibold" data-key="bodyFull">Full-Bodied</span>
+                                <span class="block text-sm text-[#6B4F4F] mt-2" data-key="bodyFullDesc">Rich, powerful, and complex.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Aromatic Profile -->
+                <div>
+                    <h2 class="text-2xl font-bold text-[#4A2E2E] border-b-2 border-[#D4B996] pb-2 mb-6" data-key="step2Title">Step 2: Select the Aromatic Profile</h2>
+                    <p class="text-[#6B4F4F] mb-6" data-key="step2Desc">What scents do you want to greet you? The aroma, or "nose," is the first impression of the wine. Select up to three.</p>
+                    <div id="aroma-options" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+                </div>
+
+                <!-- Step 3: Flavors on the Palate -->
+                <div>
+                    <h2 class="text-2xl font-bold text-[#4A2E2E] border-b-2 border-[#D4B996] pb-2 mb-6" data-key="step3Title">Step 3: Pick the Palate Flavors</h2>
+                    <p class="text-[#6B4F4F] mb-6" data-key="step3Desc">This is what you taste when you sip the wine. These flavors can be subtle or bold. Select up to four.</p>
+                    <div id="flavor-options" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="mt-12 text-center">
+                <button id="create-wine-btn" class="bg-[#8C2D2D] text-white font-bold py-4 px-10 rounded-lg text-xl shadow-lg hover:bg-[#6B2222] transition-all duration-300 transform hover:scale-105" data-key="createBtn">
+                    Create My Wine
+                </button>
+            </div>
+
+            <!-- Summary Section -->
+            <div id="summary-section" class="mt-16 pt-8 border-t-4 border-dashed border-[#D4B996] hidden">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-[#4A2E2E] mb-6" data-key="summaryTitle">Your Custom Wine</h2>
+                <div class="bg-[#FDFBF7]/80 p-8 rounded-lg shadow-inner">
+                    <p id="wine-description" class="text-lg text-[#4A2E2E] leading-relaxed"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get references to all the necessary DOM elements
+            const aromaOptionsContainer = document.getElementById('aroma-options');
+            const flavorOptionsContainer = document.getElementById('flavor-options');
+            const createWineBtn = document.getElementById('create-wine-btn');
+            const summarySection = document.getElementById('summary-section');
+            const wineDescription = document.getElementById('wine-description');
+            const langEnBtn = document.getElementById('lang-en');
+            const langEsBtn = document.getElementById('lang-es');
+
+            // Set the default language
+            let currentLanguage = 'es';
+
+            // All text translations in a single object for easy management
+            const translations = {
+                en: {
+                    title: "Design Your Perfect Wine",
+                    intro: "Welcome to your personal wine cellar. A great wine is a story in a bottle, and here you get to be the author. Select the characteristics you desire, and we'll craft a description of the wine that's perfectly suited to your palate.",
+                    step1Title: "Step 1: Choose the Body",
+                    step1Desc: "The body describes the weight and feel of the wine in your mouth. Think of it like the difference between skim milk, 2% milk, and whole milk.",
+                    bodyLight: "Light-Bodied",
+                    bodyLightDesc: "Crisp, delicate, and refreshing.",
+                    bodyMedium: "Medium-Bodied",
+                    bodyMediumDesc: "Smooth, balanced, and versatile.",
+                    bodyFull: "Full-Bodied",
+                    bodyFullDesc: "Rich, powerful, and complex.",
+                    step2Title: "Step 2: Select the Aromatic Profile",
+                    step2Desc: "What scents do you want to greet you? The aroma, or \"nose,\" is the first impression of the wine. Select up to three.",
+                    step3Title: "Step 3: Pick the Palate Flavors",
+                    step3Desc: "This is what you taste when you sip the wine. These flavors can be subtle or bold. Select up to four.",
+                    createBtn: "Create My Wine",
+                    summaryTitle: "Your Custom Wine",
+                    aromas: ['Fruity', 'Floral', 'Earthy', 'Spicy', 'Herbaceous', 'Oaky', 'Nutty', 'Mineral'],
+                    flavors: ['Cherry', 'Blackberry', 'Strawberry', 'Lemon Zest', 'Green Apple', 'Pineapple', 'Vanilla', 'Oak', 'Chocolate', 'Coffee', 'Leather', 'Tobacco', 'Black Pepper', 'Mushroom', 'Honey', 'Caramel'],
+                    alertAroma: "You can select a maximum of 3 options.",
+                    alertFlavor: "You can select a maximum of 4 options.",
+                    conjunction: "and",
+                    descStart: "You've envisioned a magnificent",
+                    descPart2: "wine, crafted to deliver a truly memorable experience.",
+                    descNose: "On the nose, it presents a captivating bouquet, defined by enchanting aromas of",
+                    descNoseEmpty: "It possesses a subtle and reserved nose, inviting closer appreciation.",
+                    descPalate: "The first sip reveals a complex and beautifully structured palate. Delightful flavors of",
+                    descPalatePart2: "dance on the tongue, leading to a long and satisfying finish.",
+                    descPalateEmpty: "The palate is elegant and refined, focusing on purity and texture over specific fruit notes, culminating in a clean, memorable finish.",
+                    descEnd: "This is a sophisticated and well-balanced wine, a perfect reflection of your personal taste."
+                },
+                es: {
+                    title: "Diseña Tu Vino Perfecto",
+                    intro: "Bienvenido a tu bodega personal. Un gran vino es una historia en una botella, y aquí tú eres el autor. Selecciona las características que deseas y crearemos la descripción de un vino perfectamente adaptado a tu paladar.",
+                    step1Title: "Paso 1: Elige el Cuerpo",
+                    step1Desc: "El cuerpo describe el peso y la sensación del vino en la boca. Piensa en ello como la diferencia entre leche desnatada, semidesnatada y entera.",
+                    bodyLight: "Cuerpo Ligero",
+                    bodyLightDesc: "Fresco, delicado y refrescante.",
+                    bodyMedium: "Cuerpo Medio",
+                    bodyMediumDesc: "Suave, equilibrado y versátil.",
+                    bodyFull: "Cuerpo Completo",
+                    bodyFullDesc: "Rico, potente y complejo.",
+                    step2Title: "Paso 2: Selecciona el Perfil Aromático",
+                    step2Desc: "¿Qué aromas quieres que te reciban? El aroma, o la \"nariz\", es la primera impresión del vino. Selecciona hasta tres.",
+                    step3Title: "Paso 3: Escoge los Sabores en Boca",
+                    step3Desc: "Esto es lo que saboreas al beber el vino. Estos sabores pueden ser sutiles o intensos. Selecciona hasta cuatro.",
+                    createBtn: "Crear Mi Vino",
+                    summaryTitle: "Tu Vino Personalizado",
+                    aromas: ['Afrutado', 'Floral', 'Terroso', 'Especiado', 'Herbáceo', 'Roble', 'Frutos Secos', 'Mineral'],
+                    flavors: ['Cereza', 'Mora', 'Fresa', 'Ralladura de Limón', 'Manzana Verde', 'Piña', 'Vainilla', 'Roble', 'Chocolate', 'Café', 'Cuero', 'Tabaco', 'Pimienta Negra', 'Champiñón', 'Miel', 'Caramelo'],
+                    alertAroma: "Puedes seleccionar un máximo de 3 opciones.",
+                    alertFlavor: "Puedes seleccionar un máximo de 4 opciones.",
+                    conjunction: "y",
+                    descStart: "Has imaginado un magnífico vino de",
+                    descPart2: ", diseñado para ofrecer una experiencia verdaderamente memorable.",
+                    descNose: "En nariz, presenta un bouquet cautivador, definido por encantadores aromas de",
+                    descNoseEmpty: "Posee una nariz sutil y reservada, que invita a una apreciación más cercana.",
+                    descPalate: "El primer sorbo revela un paladar complejo y bellamente estructurado. Deliciosos sabores de",
+                    descPalatePart2: "danzan en la lengua, conduciendo a un final largo y satisfactorio.",
+                    descPalateEmpty: "El paladar es elegante y refinado, centrándose en la pureza y la textura sobre notas de fruta específicas, culminando en un final limpio y memorable.",
+                    descEnd: "Este es un vino sofisticado y bien equilibrado, un reflejo perfecto de tu gusto personal."
+                }
+            };
+
+            /**
+             * Creates and appends a styled checkbox input element to a container.
+             * @param {string} item - The value and label text for the checkbox.
+             * @param {string} groupName - The name attribute for the checkbox input.
+             * @param {HTMLElement} container - The container to append the checkbox to.
+             * @param {number} limit - The maximum number of selections allowed for this group.
+             * @param {string} lang - The current language code ('en' or 'es').
+             */
+            const createCheckbox = (item, groupName, container, limit, lang) => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center bg-white p-3 rounded-lg shadow-sm';
+                const id = `${groupName}-${item.replace(/\s+/g, '-')}`;
+                
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = id;
+                input.name = groupName;
+                input.value = item;
+                input.className = 'custom-checkbox h-5 w-5 rounded border-gray-300 text-[#8C2D2D] focus:ring-[#8C2D2D] transition duration-150 ease-in-out';
+                
+                input.addEventListener('change', () => {
+                    const checked = container.querySelectorAll(`input[name=${groupName}]:checked`);
+                    if (checked.length > limit) {
+                        // Using a custom alert/message box is recommended for production environments.
+                        // Here, we use the browser's built-in alert as a simple example.
+                        const alertMessage = translations[lang][limit === 3 ? 'alertAroma' : 'alertFlavor'];
+                        if (!confirm(alertMessage)) {
+                          input.checked = false;
+                        }
+                    }
+                });
+
+                const label = document.createElement('label');
+                label.htmlFor = id;
+                label.textContent = item;
+                label.className = 'ml-3 block text-md font-medium text-[#4A2E2E] cursor-pointer';
+
+                div.appendChild(input);
+                div.appendChild(label);
+                container.appendChild(div);
+            };
+            
+            /**
+             * Updates all text on the page based on the selected language.
+             * @param {string} lang - The new language code ('en' or 'es').
+             */
+            const updateText = (lang) => {
+                currentLanguage = lang;
+                document.querySelectorAll('[data-key]').forEach(element => {
+                    const key = element.getAttribute('data-key');
+                    if (translations[lang][key]) {
+                        element.innerHTML = translations[lang][key];
+                    }
+                });
+
+                // Update body radio values for description generation
+                document.getElementById('light-body').value = translations[lang].bodyLight;
+                document.getElementById('medium-body').value = translations[lang].bodyMedium;
+                document.getElementById('full-body').value = translations[lang].bodyFull;
+
+                // Repopulate dynamic checkboxes
+                aromaOptionsContainer.innerHTML = '';
+                flavorOptionsContainer.innerHTML = '';
+                translations[lang].aromas.forEach(aroma => createCheckbox(aroma, 'aroma', aromaOptionsContainer, 3, lang));
+                translations[lang].flavors.forEach(flavor => createCheckbox(flavor, 'flavor', flavorOptionsContainer, 4, lang));
+
+                // Update language button styles
+                langEnBtn.classList.toggle('active', lang === 'en');
+                langEsBtn.classList.toggle('active', lang === 'es');
+
+                // Hide summary on language change
+                summarySection.classList.add('hidden');
+            };
+
+            // Event listeners for language switching
+            langEnBtn.addEventListener('click', () => updateText('en'));
+            langEsBtn.addEventListener('click', () => updateText('es'));
+
+            // Event listener for the main "Create My Wine" button
+            createWineBtn.addEventListener('click', () => {
+                const lang = currentLanguage;
+                // Get the selected body type from the radio buttons
+                const selectedBody = document.querySelector('input[name="body"]:checked').value;
+                // Get all checked aromas and map their values
+                const selectedAromas = Array.from(document.querySelectorAll('input[name="aroma"]:checked')).map(el => el.value.toLowerCase());
+                // Get all checked flavors and map their values
+                const selectedFlavors = Array.from(document.querySelectorAll('input[name="flavor"]:checked')).map(el => el.value.toLowerCase());
+
+                /**
+                 * Formats an array of strings into a comma-separated list with a conjunction.
+                 * @param {string[]} arr - The array of items.
+                 * @returns {string} The formatted string.
+                 */
+                const formatList = (arr) => {
+                    if (arr.length === 0) return '';
+                    if (arr.length === 1) return arr[0];
+                    if (arr.length === 2) return arr.join(` ${translations[lang].conjunction} `);
+                    return arr.slice(0, -1).join(', ') + `, ${translations[lang].conjunction} ` + arr.slice(-1);
+                };
+
+                // Build the wine description string
+                let description = `<strong>${translations[lang].descStart} ${selectedBody}</strong>${translations[lang].descPart2} `;
+                
+                if (selectedAromas.length > 0) {
+                    description += `${translations[lang].descNose} <strong>${formatList(selectedAromas)}</strong>. `;
+                } else {
+                    description += `${translations[lang].descNoseEmpty} `;
+                }
+
+                if (selectedFlavors.length > 0) {
+                    description += `${translations[lang].descPalate} <strong>${formatList(selectedFlavors)}</strong> ${translations[lang].descPalatePart2} `;
+                } else {
+                    description += `${translations[lang].descPalateEmpty} `;
+                }
+
+                description += translations[lang].descEnd;
+
+                // Update the summary section with the generated description
+                wineDescription.innerHTML = description;
+                summarySection.classList.remove('hidden');
+                summarySection.classList.add('fade-in');
+                // Smoothly scroll the summary section into view
+                summarySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+            // Initial load: populate the page with Spanish content
+            updateText('es');
+        });
+    </script>
 </body>
 </html>
+
