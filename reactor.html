@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,10 @@
                 padding: 6rem 2rem;
             }
         }
+        /* Custom border color for the services section */
+        .border-custom-blue {
+            border-left-color: #243A54;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -37,13 +41,38 @@
     <!-- Header & Navigation -->
     <header class="bg-white sticky top-0 z-50 shadow-sm">
         <nav class="flex items-center justify-between section-padding py-4">
+            <!-- Logo and Site Title -->
             <a href="#" class="flex items-center space-x-2 text-xl font-bold text-gray-800">
-                <img src="images/logo.png" alt="Chrysalis Reactor Logo" class="h-8 w-8 rounded-full">
+                <!-- Placeholder for the logo as the original URL was not working -->
+                <img src="https://placehold.co/40x40/FFD700/000000?text=CR" alt="Chrysalis Reactor Logo" class="h-8 w-8 rounded-full">
                 <span>Chrysalis Reactor</span>
             </a>
-            <!-- Language Toggle Button -->
-            <button id="lang-toggle" class="px-4 py-2 text-white bg-amber-500 rounded-lg shadow-md hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 transition-colors">ES</button>
+            <!-- Mobile Menu and Language Toggle Button - hidden on desktop -->
+            <div class="flex items-center md:hidden space-x-4">
+                <button id="lang-toggle-mobile" class="px-4 py-2 text-white bg-amber-500 rounded-lg shadow-md hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 transition-colors">EN</button>
+                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <!-- Desktop Navigation Links - hidden on mobile -->
+            <div class="hidden md:flex items-center space-x-8">
+                <ul class="flex space-x-6 text-gray-600 font-semibold">
+                    <li><a href="#about-en" class="hover:text-amber-500 transition-colors">About Us</a></li>
+                    <li><a href="#applications-en" class="hover:text-amber-500 transition-colors">Applications</a></li>
+                    <li><a href="#contact-en" class="hover:text-amber-500 transition-colors">Contact</a></li>
+                </ul>
+                <!-- Language Toggle Button -->
+                <button id="lang-toggle-desktop" class="px-4 py-2 text-white bg-amber-500 rounded-lg shadow-md hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 transition-colors">EN</button>
+            </div>
         </nav>
+        <!-- Mobile Menu Container - hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <ul class="flex flex-col items-center space-y-4 text-gray-600 font-semibold">
+                <li><a href="#about-en" class="hover:text-amber-500 transition-colors">About Us</a></li>
+                <li><a href="#applications-en" class="hover:text-amber-500 transition-colors">Applications</a></li>
+                <li><a href="#contact-en" class="hover:text-amber-500 transition-colors">Contact</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -56,7 +85,7 @@
                         Chrysalis Reactor
                     </h1>
                     <p class="mt-4 md:mt-6 text-lg md:text-xl text-gray-600">
-                        Conexión con el agua, la piedra y la energía natural.
+                        Connection with water, stone, and natural energy.
                     </p>
                 </div>
             </section>
@@ -91,8 +120,24 @@
                 </div>
             </section>
 
-            <!-- Services Section (English) -->
-            <section id="services-en" class="section-padding">
+            <!-- New Section with two images -->
+            <section id="the-process-en" class="section-padding">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                        The Process
+                    </h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                        A glimpse into our patented process of transformation.
+                    </p>
+                </div>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Product+A" alt="Image showing product transformation" class="w-full h-auto rounded-xl shadow-lg object-cover">
+                    <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Product+B" alt="Image of another product undergoing transformation" class="w-full h-auto rounded-xl shadow-lg object-cover">
+                </div>
+            </section>
+
+            <!-- Applications Section (English) -->
+            <section id="applications-en" class="section-padding">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center">
                     Applications & Sensory Results
                 </h2>
@@ -186,10 +231,10 @@
             <section id="hero-es" class="relative bg-gradient-to-r from-gray-200 to-gray-300 py-24 md:py-36 rounded-b-3xl">
                 <div class="section-padding text-center">
                     <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
-                        HENSEI <br> donde la tradición fermenta el futuro
+                        Chrysalis Reactor
                     </h1>
                     <p class="mt-4 md:mt-6 text-lg md:text-xl text-gray-600">
-                        Conexión con el agua, la piedra y la energía natural
+                        Donde la tradición fermenta el futuro.
                     </p>
                 </div>
             </section>
@@ -228,8 +273,24 @@
                 </div>
             </section>
 
-            <!-- Services Section (Spanish) -->
-            <section id="services-es" class="section-padding">
+            <!-- New Section with two images -->
+            <section id="the-process-es" class="section-padding">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                        El Proceso
+                    </h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                        Un vistazo a nuestro proceso patentado de transformación.
+                    </p>
+                </div>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Producto+A" alt="Imagen mostrando la transformación del producto" class="w-full h-auto rounded-xl shadow-lg object-cover">
+                    <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Producto+B" alt="Imagen de otro producto en transformación" class="w-full h-auto rounded-xl shadow-lg object-cover">
+                </div>
+            </section>
+
+            <!-- Applications Section (Spanish) -->
+            <section id="applications-es" class="section-padding">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center">
                     Aplicaciones y Resultados Sensoriales
                 </h2>
@@ -266,7 +327,37 @@
                     </div>
                 </div>
             </section>
-            
+
+            <!-- New section with Hensei-specific services -->
+            <section id="collaboration-services-es" class="bg-gray-100 section-padding rounded-xl shadow-lg mt-12">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Nuestros Servicios de Colaboración</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                        Esta página es el punto de encuentro para fabricantes, distribuidores y visionarios del sector que buscan diferenciarse y ofrecer una experiencia inigualable a sus clientes.
+                    </p>
+                </div>
+                <div class="mt-8">
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-700">
+                        <li class="bg-white p-6 rounded-xl shadow-md border-l-4 border-custom-blue">
+                            <p class="font-semibold text-gray-900 mb-2">Pruebas con el producto:</p>
+                            <p>Ofrecemos la posibilidad de realizar pruebas con el producto que tú elijas. Nuestro equipo te acompañará en cada paso para que puedas comprobar el potencial del "Módulo Hensei de envejecimiento" en tu propia línea de producción.</p>
+                        </li>
+                        <li class="bg-white p-6 rounded-xl shadow-md border-l-4 border-custom-blue">
+                            <p class="font-semibold text-gray-900 mb-2">Divulgación del proceso:</p>
+                            <p>Divulgación del proceso patentado para profesionales y empresas.</p>
+                        </li>
+                        <li class="bg-white p-6 rounded-xl shadow-md border-l-4 border-custom-blue">
+                            <p class="font-semibold text-gray-900 mb-2">Pruebas personalizadas:</p>
+                            <p>Pruebas personalizadas con el producto que el cliente proponga.</p>
+                        </li>
+                        <li class="bg-white p-6 rounded-xl shadow-md border-l-4 border-custom-blue">
+                            <p class="font-semibold text-gray-900 mb-2">Asesoramiento directo:</p>
+                            <p>Asesoramiento directo con los creadores de la patente.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
             <!-- Time and Cost Savings Section (Spanish) -->
             <section id="savings-es" class="bg-gray-100 section-padding rounded-xl shadow-lg mt-12">
                 <div class="text-center">
@@ -311,7 +402,7 @@
                                 <path d="M12 2.25a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM18 6a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z" />
                                 <path fill-rule="evenodd" d="M16.896 14.936a7.5 7.5 0 1 0-9.792 0l-3.268 3.268a1.5 1.5 0 0 0 1.06 2.564h14.736a1.5 1.5 0 0 0 1.06-2.564l-3.268-3.268Zm-5.325 3.064c-.456-.456-.684-1.03-.684-1.636 0-1.29.98-2.316 2.185-2.528.188.081.382.127.584.127h.584c.202 0 .396-.046.584-.127 1.205.212 2.185 1.238 2.185 2.528 0 .606-.228 1.18-.684 1.636-.456.456-1.03.684-1.636.684-.606 0-1.18-.228-1.636-.684Z" clip-rule="evenodd" />
                             </svg>
-                            <p class="text-gray-600">Madrid – Spain</p>
+                            <p class="text-gray-600">Madrid – España</p>
                         </div>
                     </div>
                 </div>
@@ -327,31 +418,66 @@
         </div>
     </footer>
 
-    <!-- JavaScript for language toggle -->
+    <!-- JavaScript for language and mobile menu toggle -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const langToggle = document.getElementById('lang-toggle');
+            // Get elements for language toggling
+            const langToggleDesktop = document.getElementById('lang-toggle-desktop');
+            const langToggleMobile = document.getElementById('lang-toggle-mobile');
             const enContent = document.getElementById('en-content');
             const esContent = document.getElementById('es-content');
+            const footerTextEn = document.getElementById('footer-text-en');
+            const footerTextEs = document.getElementById('footer-text-es');
+            
+            // Get elements for mobile menu toggling
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
 
             // Function to set language based on a given language code
             const setLanguage = (lang) => {
                 if (lang === 'en') {
                     enContent.classList.remove('hidden');
                     esContent.classList.add('hidden');
-                    langToggle.textContent = 'ES';
+                    langToggleDesktop.textContent = 'ES';
+                    langToggleMobile.textContent = 'ES';
+                    footerTextEn.classList.remove('hidden');
+                    footerTextEs.classList.add('hidden');
                 } else {
                     enContent.classList.add('hidden');
                     esContent.classList.remove('hidden');
-                    langToggle.textContent = 'EN';
+                    langToggleDesktop.textContent = 'EN';
+                    langToggleMobile.textContent = 'EN';
+                    footerTextEn.classList.add('hidden');
+                    footerTextEs.classList.remove('hidden');
                 }
             };
 
             // Toggle language on button click
-            langToggle.addEventListener('click', () => {
-                const currentLang = langToggle.textContent === 'ES' ? 'en' : 'es';
+            langToggleDesktop.addEventListener('click', () => {
+                const currentLang = enContent.classList.contains('hidden') ? 'es' : 'en';
                 setLanguage(currentLang === 'en' ? 'es' : 'en');
             });
+
+            langToggleMobile.addEventListener('click', () => {
+                const currentLang = enContent.classList.contains('hidden') ? 'es' : 'en';
+                setLanguage(currentLang === 'en' ? 'es' : 'en');
+            });
+            
+            // Toggle mobile menu visibility
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when a link is clicked
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Set default language to Spanish
+            setLanguage('es');
         });
     </script>
 </body>
