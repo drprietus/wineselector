@@ -48,7 +48,7 @@
             </a>
             <!-- Mobile Menu and Language Toggle Button - hidden on desktop -->
             <div class="flex items-center md:hidden space-x-4">
-                <button id="lang-toggle-mobile" class="px-4 py-2 text-white bg-amber-500 rounded-lg shadow-md hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 transition-colors">EN</button>
+                <button id="lang-toggle-mobile" class="px-4 py-2 text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors">EN</button>
                 <button id="menu-toggle" class="text-gray-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
@@ -56,20 +56,22 @@
             <!-- Desktop Navigation Links - hidden on mobile -->
             <div class="hidden md:flex items-center space-x-8">
                 <ul class="flex space-x-6 text-gray-600 font-semibold">
-                    <li><a href="#about-en" class="hover:text-amber-500 transition-colors">About Us</a></li>
-                    <li><a href="#applications-en" class="hover:text-amber-500 transition-colors">Applications</a></li>
-                    <li><a href="#contact-en" class="hover:text-amber-500 transition-colors">Contact</a></li>
+                    <li><a href="#about-es" class="hover:text-amber-500 transition-colors">Qué es</a></li>
+                    <li><a href="#applications-es" class="hover:text-amber-500 transition-colors">Aplicaciones</a></li>
+                    <li><a href="#services-es" class="hover:text-amber-500 transition-colors">Servicios</a></li>
+                    <li><a href="#contact-es" class="hover:text-amber-500 transition-colors">Contacto</a></li>
                 </ul>
                 <!-- Language Toggle Button -->
-                <button id="lang-toggle-desktop" class="px-4 py-2 text-white bg-amber-500 rounded-lg shadow-md hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 transition-colors">EN</button>
+                <button id="lang-toggle-desktop" class="px-4 py-2 text-white bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors">EN</button>
             </div>
         </nav>
         <!-- Mobile Menu Container - hidden by default -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
             <ul class="flex flex-col items-center space-y-4 text-gray-600 font-semibold">
-                <li><a href="#about-en" class="hover:text-amber-500 transition-colors">About Us</a></li>
-                <li><a href="#applications-en" class="hover:text-amber-500 transition-colors">Applications</a></li>
-                <li><a href="#contact-en" class="hover:text-amber-500 transition-colors">Contact</a></li>
+                <li><a href="#about-es" class="hover:text-amber-500 transition-colors">Qué es</a></li>
+                <li><a href="#applications-es" class="hover:text-amber-500 transition-colors">Aplicaciones</a></li>
+                <li><a href="#services-es" class="hover:text-amber-500 transition-colors">Servicios</a></li>
+                <li><a href="#contact-es" class="hover:text-amber-500 transition-colors">Contacto</a></li>
             </ul>
         </div>
     </header>
@@ -227,32 +229,31 @@
         <!-- Spanish Content Container (Hidden by default) -->
         <div id="es-content" class="hidden">
             <!-- Hero Section (Spanish) -->
-            <section id="hero-es" class="relative bg-gradient-to-r from-gray-200 to-gray-300 py-24 md:py-36 rounded-b-3xl">
+            <section id="hero-es" class="bg-gray-100 rounded-xl shadow-lg mx-4 md:mx-auto">
                 <div class="section-padding text-center">
                     <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
-                        Chrysalis Reactor - Hensei
+                        Hensei
                     </h1>
+                    <img src="images/hensei.jpg" alt="hensei" class="w-72 h-auto rounded-xl shadow-lg object-cover mx-auto">
                     <br>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
-                        Sistema de envejecimiento acelerado que mejora la complejidad aromática y gustativa en vinos, cavas y destilados en menos tiempo y respetando su calidad natural.
+                    <h2 class="text-l md:text-xl font-bold text-gray-800">
+                        Sistema de envejecimiento acelerado que mejora la complejidad aromática y gustativa en vinos, cavas y destilados en menos tiempo y respetando su calidad natural
                     </h2>
                     <p class="mt-4 md:mt-6 text-lg md:text-xl text-gray-800">
-                        Donde la tradición fermenta el futuro.
+                        <i>Donde la tradición fermenta el futuro</i>
                     </p>
                 </div>
             </section>
 
             <!-- About Section (Spanish) -->
-            <section id="about-es" class="bg-white rounded-xl shadow-lg -mt-16 mx-4 md:mx-auto">
+            <section id="about-es" class="bg-white rounded-xl shadow-lg mt-12 mx-4 md:mx-auto">
                 <div class="section-padding text-center md:text-left">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
                         Método patentado de envejecimiento y transformación sensorial
                     </h2>
-                    <p class="mt-4 md:mt-6 text-gray-600 max-w-3xl mx-auto md:mx-0">
-                        La técnica de envejecimiento Hensei se basa en crear un entorno perfecto y controlado de las condiciones naturales de maduración.
-                        Este equilibrio único intensifica el perfil sensorial del producto, ofreciendo resultados que sorprenden incluso a expertos catadores.
-                        Se consigue mediante un reactor físico cerrado, diseñado para acelerar procesos de transformación natural en vinos, 
-                        licores, sakes, vinagres o salsas fermentadas, sin añadir sustancias externas, únicamente modulando condiciones físicas.
+                    <p class="mt-4 md:mt-6 text-gray-600 mx-auto md:mx-0 text-left">
+                        La técnica de envejecimiento Hensei se basa en crear un entorno perfecto y controlado de las condiciones naturales de maduración. Este equilibrio único intensifica el perfil sensorial del producto, ofreciendo resultados que sorprenden incluso a expertos catadores.<br>
+                        Se consigue mediante un reactor físico cerrado, diseñado para acelerar procesos de transformación natural en vinos, licores, sakes, vinagres o salsas fermentadas, sin añadir sustancias externas, únicamente modulando condiciones físicas.<br>
                         Es innovador, sostenible, eficiente y respetando la tradición.
                     </p>
                     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
@@ -262,60 +263,38 @@
                         </div>
                         <div class="bg-gray-100 p-6 rounded-xl shadow-md">
                             <h3 class="font-semibold text-lg text-gray-800">Temperatura controlada</h3>
-                            <p class="text-gray-600 mt-2">Regulación precisa de la temperatura.</p>
+                            <p class="text-gray-600 mt-2">Regulación precisa de la temperatura</p>
                         </div>
                         <div class="bg-gray-100 p-6 rounded-xl shadow-md">
                             <h3 class="font-semibold text-lg text-gray-800">Presión estable</h3>
-                            <p class="text-gray-600 mt-2">Presión constante sin fluctuaciones.</p>
+                            <p class="text-gray-600 mt-2">Presión constante sin fluctuaciones</p>
                         </div>
                         <div class="bg-gray-100 p-6 rounded-xl shadow-md">
                             <h3 class="font-semibold text-lg text-gray-800">Radiación gamma</h3>
-                            <p class="text-gray-600 mt-2">Exposición a radiación gamma natural e inocua.</p>
+                            <p class="text-gray-600 mt-2">Exposición a radiación gamma natural e inocua</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- New Section with two images -->
-            <section id="the-process-es" class="section-padding">
+            <!-- Applications (Spanish) -->
+            <section id="applications-es" class="section-padding">
                 <div class="text-center">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
-                        El Proceso
+                        Aplicaciones y resultados sensoriales
                     </h2>
                     <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-                        Un vistazo a nuestro proceso patentado de transformación.
+                        Nuestro método patentado se puede aplicar a una variedad de productos para mejorar su calidad y perfil: vinos, sake, whisky, vinagre, salsa fermentada, otros productos gourmet
                     </p>
                 </div>
                 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <img src="images/nosotros.jpeg" alt="about us" class="w-full h-auto rounded-xl shadow-lg object-cover">
                     <img src="images/applications.jpeg" alt="applications" class="w-full h-auto rounded-xl shadow-lg object-cover">
+                    <img src="images/nosotros.jpeg" alt="about us" class="w-full h-auto rounded-xl shadow-lg object-cover">
                 </div>
-            </section>
-
-            <!-- Applications Section (Spanish) -->
-            <section id="applications-es" class="section-padding">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center">
-                    Aplicaciones y Resultados Sensoriales
-                </h2>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card for Applications -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
-                        <h3 class="text-2xl font-semibold text-gray-800">Nuestro Método</h3>
-                        <p class="mt-4 text-gray-600">
-                            Nuestro método patentado se puede aplicar a una variedad de productos para mejorar su calidad y perfil.
-                        </p>
-                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-                            <li>Sake</li>
-                            <li>Whisky</li>
-                            <li>Vinos</li>
-                            <li>Salsas fermentadas</li>
-                            <li>Vinagres</li>
-                            <li>Otros productos gourmet</li>
-                        </ul>
-                    </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                     <!-- Card for Molecular Restructuring -->
                     <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
-                        <h3 class="text-2xl font-semibold text-gray-800">Reestructuración Molecular</h3>
+                        <h3 class="text-2xl font-semibold text-gray-800">Reestructuración molecular</h3>
                         <p class="mt-4 text-gray-600">
                             Logramos una reestructuración molecular, lo que lleva a la integración de taninos, ácidos y azúcares.
                             Los resultados son personalizables según el tipo de producto.
@@ -323,7 +302,7 @@
                     </div>
                     <!-- Card for Sensory Evolution -->
                     <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
-                        <h3 class="text-2xl font-semibold text-gray-800">Evolución Sensorial</h3>
+                        <h3 class="text-2xl font-semibold text-gray-800">Evolución sensorial</h3>
                         <p class="mt-4 text-gray-600">
                             Realza los aromas y sabores sin aditivos ni químicos. Experimenta una transformación aromática con nuevas notas (ahumadas, de frutos secos, caramelizadas), un cambio en la textura y evolución visual.
                         </p>
@@ -331,31 +310,27 @@
                 </div>
             </section>
 
-            <!-- New section with Hensei-specific services -->
-            <section id="collaboration-services-es" class="bg-gray-100 section-padding rounded-xl shadow-lg mt-12">
+            <!-- Services (Spanish) -->
+            <section id="services-es" class="bg-gray-100 section-padding rounded-xl shadow-lg mt-12">
                 <div class="text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Nuestros Servicios de Colaboración</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Nuestros servicios de colaboración</h2>
                     <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-                        Esta página es el punto de encuentro para fabricantes, distribuidores y visionarios del sector que buscan diferenciarse y ofrecer una experiencia inigualable a sus clientes.
+                        Esta página es el punto de encuentro para fabricantes, distribuidores y visionarios del sector que buscan diferenciarse y ofrecer una experiencia inigualable a sus clientes
                     </p>
                 </div>
                 <div class="mt-8">
-                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-700">
+                    <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg text-gray-700">
                         <li class="bg-white p-6 rounded-xl shadow-md border-l-4 border-custom-blue">
-                            <p class="font-semibold text-gray-900 mb-2">Pruebas con el producto</p>
-                            <p>Ofrecemos la posibilidad de realizar pruebas con el producto que tú elijas. Nuestro equipo te acompañará en cada paso para que puedas comprobar el potencial del "Módulo Hensei de envejecimiento" en tu propia línea de producción.</p>
+                            <p class="font-semibold text-gray-900 mb-2">Pruebas personalizadas</p>
+                            <p>Ofrecemos la posibilidad de realizar pruebas con el producto que tú elijas para que puedas comprobar el potencial del sistema Hensei de envejecimiento en tus productos.</p>
                         </li>
                         <li class="bg-white p-6 rounded-xl shadow-md border-l-4 border-custom-blue">
                             <p class="font-semibold text-gray-900 mb-2">Divulgación del proceso</p>
-                            <p>Divulgación del proceso patentado para profesionales y empresas</p>
+                            <p>Divulgación del proceso patentado para profesionales y empresas. Asesoramiento directo con los creadores de la patente.</p>
                         </li>
                         <li class="bg-white p-6 rounded-xl shadow-md border-l-4 border-custom-blue">
-                            <p class="font-semibold text-gray-900 mb-2">Pruebas personalizadas</p>
-                            <p>Pruebas personalizadas con el producto que el cliente proponga</p>
-                        </li>
-                        <li class="bg-white p-6 rounded-xl shadow-md border-l-4 border-custom-blue">
-                            <p class="font-semibold text-gray-900 mb-2">Asesoramiento directo</p>
-                            <p>Asesoramiento directo con los creadores de la patente</p>
+                            <p class="font-semibold text-gray-900 mb-2">Implementación en sistema de producción</p>
+                            <p>Consultoría del proceso patentado para profesionales y empresas que quieran implementar el sistema en su propia línea de producción</p>
                         </li>
                     </ul>
                 </div>
@@ -367,7 +342,7 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
                         Ahorro de tiempo y costes de producción
                     </h2>
-                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto text-left">
                         Nuestro método ofrece una alternativa eficiente y controlada a los procesos de envejecimiento tradicionales, reduciendo significativamente el tiempo y los recursos necesarios para lograr resultados sensoriales superiores. Al acelerar la transformación, te ayudamos a reducir costes de producción y a llevar tus productos al mercado más rápido.
                     </p>
                 </div>
