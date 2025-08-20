@@ -38,148 +38,296 @@
     <header class="bg-white sticky top-0 z-50 shadow-sm">
         <nav class="flex items-center justify-between section-padding py-4">
             <a href="#" class="flex items-center space-x-2 text-xl font-bold text-gray-800">
-                <!-- Placeholder for the logo. The user requested to keep the logo, but since I cannot access the image, a text-based logo is used here. -->
                 <img src="images/logo.png" alt="Chrysalis Reactor Logo" class="h-8 w-8 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-gray-500">
-                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-2.625 6c-.54 0-.785.122-.97.348a1.53 1.53 0 0 0-.348.97c0 .54.122.785.348.97a1.53 1.53 0 0 0 .97.348c.54 0 .785-.122.97-.348a1.53 1.53 0 0 0 .348-.97c0-.54-.122-.785-.348-.97a1.53 1.53 0 0 0-.97-.348Zm4.125 0c-.54 0-.785.122-.97.348a1.53 1.53 0 0 0-.348.97c0 .54.122.785.348.97a1.53 1.53 0 0 0 .97.348c.54 0 .785-.122.97-.348a1.53 1.53 0 0 0 .348-.97c0-.54-.122-.785-.348-.97a1.53 1.53 0 0 0-.97-.348Zm-2.625 3.75c-.54 0-.785.122-.97.348a1.53 1.53 0 0 0-.348.97c0 .54.122.785.348.97a1.53 1.53 0 0 0 .97.348c.54 0 .785-.122.97-.348a1.53 1.53 0 0 0 .348-.97c0-.54-.122-.785-.348-.97a1.53 1.53 0 0 0-.97-.348Zm4.125 0c-.54 0-.785.122-.97.348a1.53 1.53 0 0 0-.348.97c0 .54.122.785.348.97a1.53 1.53 0 0 0 .97.348c.54 0 .785-.122.97-.348a1.53 1.53 0 0 0 .348-.97c0-.54-.122-.785-.348-.97a1.53 1.53 0 0 0-.97-.348ZM9 15.75c-.54 0-.785.122-.97.348a1.53 1.53 0 0 0-.348.97c0 .54.122.785.348.97a1.53 1.53 0 0 0 .97.348c.54 0 .785-.122.97-.348a1.53 1.53 0 0 0 .348-.97c0-.54-.122-.785-.348-.97a1.53 1.53 0 0 0-.97-.348ZM15 15.75c-.54 0-.785.122-.97.348a1.53 1.53 0 0 0-.348.97c0 .54.122.785.348.97a1.53 1.53 0 0 0 .97.348c.54 0 .785-.122.97-.348a1.53 1.53 0 0 0 .348-.97c0-.54-.122-.785-.348-.97a1.53 1.53 0 0 0-.97-.348Z" />
-                </svg>
                 <span>Chrysalis Reactor</span>
             </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
-                <a href="#services" class="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
-                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-            </div>
+            <!-- Language Toggle Button -->
+            <button id="lang-toggle" class="px-4 py-2 text-white bg-amber-500 rounded-lg shadow-md hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 transition-colors">ES</button>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="relative bg-gradient-to-r from-gray-200 to-gray-300 py-24 md:py-36 rounded-b-3xl">
-            <div class="section-padding text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
-                    Chrysalis Reactor
-                </h1>
-                <p class="mt-4 md:mt-6 text-lg md:text-xl text-gray-600">
-                    Conexión con el agua, la piedra y la energía natural.
-                </p>
-            </div>
-            <!-- Optional: Add a subtle background pattern or image here for extra visual interest -->
-        </section>
+        <!-- English Content Container -->
+        <div id="en-content">
+            <!-- Hero Section (English) -->
+            <section id="hero-en" class="relative bg-gradient-to-r from-gray-200 to-gray-300 py-24 md:py-36 rounded-b-3xl">
+                <div class="section-padding text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
+                        Chrysalis Reactor
+                    </h1>
+                    <p class="mt-4 md:mt-6 text-lg md:text-xl text-gray-600">
+                        Conexión con el agua, la piedra y la energía natural.
+                    </p>
+                </div>
+            </section>
 
-        <!-- About Section -->
-        <section id="about" class="bg-white rounded-xl shadow-lg -mt-16 mx-4 md:mx-auto">
-            <div class="section-padding text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
-                    About Us
+            <!-- About Section (English) -->
+            <section id="about-en" class="bg-white rounded-xl shadow-lg -mt-16 mx-4 md:mx-auto">
+                <div class="section-padding text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                        About Us
+                    </h2>
+                    <p class="mt-4 md:mt-6 text-gray-600 max-w-3xl mx-auto md:mx-0">
+                        We use a patented method of sensory aging and transformation. Our "HENSEI" technique is where tradition ferments the future. Inspired by the Japanese narratives of the dragon, the chrysalis, and rebirth, our process is based on creating a perfect, controlled environment.
+                    </p>
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                        <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+                            <h3 class="font-semibold text-lg text-gray-800">Darkness</h3>
+                            <p class="text-gray-600 mt-2">Controlled and stable environment.</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+                            <h3 class="font-semibold text-lg text-gray-800">Controlled Temp.</h3>
+                            <p class="text-gray-600 mt-2">Precise temperature regulation.</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+                            <h3 class="font-semibold text-lg text-gray-800">Stable Pressure</h3>
+                            <p class="text-gray-600 mt-2">Consistent pressure without fluctuations.</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+                            <h3 class="font-semibold text-lg text-gray-800">Gamma Radiation</h3>
+                            <p class="text-gray-600 mt-2">Exposure to natural, harmless gamma radiation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section (English) -->
+            <section id="services-en" class="section-padding">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center">
+                    Applications & Sensory Results
                 </h2>
-                <p class="mt-4 md:mt-6 text-gray-600 max-w-3xl mx-auto md:mx-0">
-                    We use a patented method of sensory aging and transformation. Our "HENSEI" technique is where tradition ferments the future. Inspired by the Japanese narratives of the dragon, the chrysalis, and rebirth, our process is based on creating a perfect, controlled environment.
-                </p>
-                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-                    <div class="bg-gray-100 p-6 rounded-xl shadow-md">
-                        <h3 class="font-semibold text-lg text-gray-800">Darkness</h3>
-                        <p class="text-gray-600 mt-2">Controlled and stable environment.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card for Applications -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">Our Method</h3>
+                        <p class="mt-4 text-gray-600">
+                            Our patented method can be applied to a variety of products to enhance their quality and profile.
+                        </p>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>Sake</li>
+                            <li>Whisky</li>
+                            <li>Wines</li>
+                            <li>Fermented sauces</li>
+                            <li>Vinegars</li>
+                            <li>Other gourmet products</li>
+                        </ul>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-xl shadow-md">
-                        <h3 class="font-semibold text-lg text-gray-800">Controlled Temp.</h3>
-                        <p class="text-gray-600 mt-2">Precise temperature regulation.</p>
+                    <!-- Card for Molecular Restructuring -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">Molecular Restructuring</h3>
+                        <p class="mt-4 text-gray-600">
+                            We achieve a molecular re-structuring, leading to the integration of tannins, acids, and sugars.
+                        </p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-xl shadow-md">
-                        <h3 class="font-semibold text-lg text-gray-800">Stable Pressure</h3>
-                        <p class="text-gray-600 mt-2">Consistent pressure without fluctuations.</p>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-xl shadow-md">
-                        <h3 class="font-semibold text-lg text-gray-800">Gamma Radiation</h3>
-                        <p class="text-gray-600 mt-2">Exposure to natural, harmless gamma radiation.</p>
+                    <!-- Card for Sensory Evolution -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">Sensory Evolution</h3>
+                        <p class="mt-4 text-gray-600">
+                            Experience an aromatic transformation with new notes (smoked, dried fruits, caramelized), a change in texture, and visual evolution.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Services Section -->
-        <section id="services" class="section-padding">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center">
-                Applications & Sensory Results
-            </h2>
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card for Applications -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
-                    <h3 class="text-2xl font-semibold text-gray-800">Our Method</h3>
-                    <p class="mt-4 text-gray-600">
-                        Our patented method can be applied to a variety of products to enhance their quality and profile.
-                    </p>
-                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-                        <li>Sake</li>
-                        <li>Whisky</li>
-                        <li>Wines</li>
-                        <li>Fermented sauces</li>
-                        <li>Vinegars</li>
-                        <li>Other gourmet products</li>
-                    </ul>
-                </div>
-                <!-- Card for Molecular Restructuring -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
-                    <h3 class="text-2xl font-semibold text-gray-800">Molecular Restructuring</h3>
-                    <p class="mt-4 text-gray-600">
-                        We achieve a molecular re-structuring, leading to the integration of tannins, acids, and sugars.
+            <!-- Contact Section (English) -->
+            <section id="contact-en" class="bg-white section-padding rounded-xl shadow-lg">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                        Contact Us
+                    </h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto md:mx-0">
+                        Get in touch to learn more about our process and how we can transform your products.
                     </p>
                 </div>
-                <!-- Card for Sensory Evolution -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
-                    <h3 class="text-2xl font-semibold text-gray-800">Sensory Evolution</h3>
-                    <p class="mt-4 text-gray-600">
-                        Experience an aromatic transformation with new notes (smoked, dried fruits, caramelized), a change in texture, and visual evolution.
-                    </p>
+                <div class="mt-8 flex flex-col md:flex-row md:space-x-8 items-center md:items-start">
+                    <div class="space-y-4 text-center md:text-left">
+                        <div class="flex items-center space-x-2 justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-500">
+                                <path fill-rule="evenodd" d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.695 2.621a3 3 0 0 1-2.61 0L1.5 8.67Z" clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M1.5 8.67V6a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v2.67l-7.213 2.165a4.5 4.5 0 0 0-3.935 0L1.5 8.67Z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-gray-600">ramosnavas@gmail.com</p>
+                        </div>
+                        <div class="flex items-center space-x-2 justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-500">
+                                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.373a3 3 0 0 1 3 3v1.674c0 .717-.262 1.424-.766 1.968L6.726 9.593a1.868 1.868 0 0 0-.026 2.052c.41.97 1.448 1.57 2.552 1.854 1.258.322 2.65.254 3.963-.122a.896.896 0 0 0 .801-.621l1.15-3.022a1.875 1.875 0 0 1 1.637-1.015h1.725a3 3 0 0 1 3 3v1.5a1.5 1.5 0 0 1-1.5 1.5H15a1.5 1.5 0 0 0-1.5 1.5c0 2.205 1.155 4.237 2.946 5.564a2.535 2.535 0 0 1 1.054.896c.273.666.273 1.341 0 2.007a2.534 2.534 0 0 1-1.054.896 9.774 9.774 0 0 1-4.73 1.343c-3.15.35-6.31-.05-9.358-1.464a2.541 2.541 0 0 1-1.054-.896c-.273-.666-.273-1.341 0-2.007a2.534 2.534 0 0 1 1.054-.896c1.79-1.327 2.945-3.359 2.945-5.564a1.5 1.5 0 0 0-1.5-1.5H4.5a1.5 1.5 0 0 1-1.5-1.5V4.5Z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-gray-600">+34 643 153 687</p>
+                        </div>
+                        <div class="flex items-center space-x-2 justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-500">
+                                <path d="M11.25 10.5h1.5A2.25 2.25 0 0 0 15 8.25V6.75a2.25 2.25 0 0 0-2.25-2.25h-1.5A2.25 2.25 0 0 0 9 6.75v1.5a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM6 6a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 6 6Z" clip-rule="evenodd" />
+                                <path d="M12 2.25a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM18 6a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z" />
+                                <path fill-rule="evenodd" d="M16.896 14.936a7.5 7.5 0 1 0-9.792 0l-3.268 3.268a1.5 1.5 0 0 0 1.06 2.564h14.736a1.5 1.5 0 0 0 1.06-2.564l-3.268-3.268Zm-5.325 3.064c-.456-.456-.684-1.03-.684-1.636 0-1.29.98-2.316 2.185-2.528.188.081.382.127.584.127h.584c.202 0 .396-.046.584-.127 1.205.212 2.185 1.238 2.185 2.528 0 .606-.228 1.18-.684 1.636-.456.456-1.03.684-1.636.684-.606 0-1.18-.228-1.636-.684Z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-gray-600">Madrid – Spain</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="bg-white section-padding rounded-xl shadow-lg">
-            <div class="text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
-                    Contact Us
+        <!-- Spanish Content Container (Hidden by default) -->
+        <div id="es-content" class="hidden">
+            <!-- Hero Section (Spanish) -->
+            <section id="hero-es" class="relative bg-gradient-to-r from-gray-200 to-gray-300 py-24 md:py-36 rounded-b-3xl">
+                <div class="section-padding text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
+                        HENSEI <br> donde la tradición fermenta el futuro
+                    </h1>
+                    <p class="mt-4 md:mt-6 text-lg md:text-xl text-gray-600">
+                        Conexión con el agua, la piedra y la energía natural
+                    </p>
+                </div>
+            </section>
+
+            <!-- About Section (Spanish) -->
+            <section id="about-es" class="bg-white rounded-xl shadow-lg -mt-16 mx-4 md:mx-auto">
+                <div class="section-padding text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                        Método patentado de envejecimiento y transformación sensorial
+                    </h2>
+                    <p class="mt-4 md:mt-6 text-gray-600 max-w-3xl mx-auto md:mx-0">
+                        La técnica "HENSEI" es donde la tradición fermenta el futuro inspirado en las narrativas japonesas del dragón, la crisálida y el renacimiento.
+                        Constituye un salto evolutivo en el arte del envejecimiento que acorta drásticamente los tiempos de maduración de vinos, cavas, destilados y salsas sin alterar su naturaleza.
+                        Es un proceso 100% natural que reproduce y potencia las condiciones óptimas de envejecimiento, logrando en días lo que tradicionalmente requiere años.
+                        Se basa en crear un entorno perfecto y controlado
+                    </p>
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                        <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+                            <h3 class="font-semibold text-lg text-gray-800">Oscuridad</h3>
+                            <p class="text-gray-600 mt-2">Entorno controlado y estable.</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+                            <h3 class="font-semibold text-lg text-gray-800">Temperatura controlada</h3>
+                            <p class="text-gray-600 mt-2">Regulación precisa de la temperatura.</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+                            <h3 class="font-semibold text-lg text-gray-800">Presión estable</h3>
+                            <p class="text-gray-600 mt-2">Presión constante sin fluctuaciones.</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+                            <h3 class="font-semibold text-lg text-gray-800">Radiación gamma</h3>
+                            <p class="text-gray-600 mt-2">Exposición a radiación gamma natural e inocua.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section (Spanish) -->
+            <section id="services-es" class="section-padding">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center">
+                    Aplicaciones y Resultados Sensoriales
                 </h2>
-                <p class="mt-4 text-gray-600 max-w-3xl mx-auto md:mx-0">
-                    Get in touch to learn more about our process and how we can transform your products.
-                </p>
-            </div>
-            <div class="mt-8 flex flex-col md:flex-row md:space-x-8 items-center md:items-start">
-                <div class="space-y-4 text-center md:text-left">
-                    <div class="flex items-center space-x-2 justify-center md:justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-500">
-                            <path fill-rule="evenodd" d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.695 2.621a3 3 0 0 1-2.61 0L1.5 8.67Z" clip-rule="evenodd" />
-                            <path fill-rule="evenodd" d="M1.5 8.67V6a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v2.67l-7.213 2.165a4.5 4.5 0 0 0-3.935 0L1.5 8.67Z" clip-rule="evenodd" />
-                        </svg>
-                        <p class="text-gray-600">ramosnavas@gmail.com</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card for Applications -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">Nuestro Método</h3>
+                        <p class="mt-4 text-gray-600">
+                            Nuestro método patentado se puede aplicar a una variedad de productos para mejorar su calidad y perfil.
+                        </p>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>Sake</li>
+                            <li>Whisky</li>
+                            <li>Vinos</li>
+                            <li>Salsas fermentadas</li>
+                            <li>Vinagres</li>
+                            <li>Otros productos gourmet</li>
+                        </ul>
                     </div>
-                    <div class="flex items-center space-x-2 justify-center md:justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-500">
-                            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.373a3 3 0 0 1 3 3v1.674c0 .717-.262 1.424-.766 1.968L6.726 9.593a1.868 1.868 0 0 0-.026 2.052c.41.97 1.448 1.57 2.552 1.854 1.258.322 2.65.254 3.963-.122a.896.896 0 0 0 .801-.621l1.15-3.022a1.875 1.875 0 0 1 1.637-1.015h1.725a3 3 0 0 1 3 3v1.5a1.5 1.5 0 0 1-1.5 1.5H15a1.5 1.5 0 0 0-1.5 1.5c0 2.205 1.155 4.237 2.946 5.564a2.535 2.535 0 0 1 1.054.896c.273.666.273 1.341 0 2.007a2.534 2.534 0 0 1-1.054.896 9.774 9.774 0 0 1-4.73 1.343c-3.15.35-6.31-.05-9.358-1.464a2.541 2.541 0 0 1-1.054-.896c-.273-.666-.273-1.341 0-2.007a2.534 2.534 0 0 1 1.054-.896c1.79-1.327 2.945-3.359 2.945-5.564a1.5 1.5 0 0 0-1.5-1.5H4.5a1.5 1.5 0 0 1-1.5-1.5V4.5Z" clip-rule="evenodd" />
-                        </svg>
-                        <p class="text-gray-600">+34 643 153 687</p>
+                    <!-- Card for Molecular Restructuring -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">Reestructuración Molecular</h3>
+                        <p class="mt-4 text-gray-600">
+                            Logramos una reestructuración molecular, lo que lleva a la integración de taninos, ácidos y azúcares.
+                            Los resultados son personalizables según el tipo de producto.
+                        </p>
                     </div>
-                    <div class="flex items-center space-x-2 justify-center md:justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-500">
-                            <path d="M11.25 10.5h1.5A2.25 2.25 0 0 0 15 8.25V6.75a2.25 2.25 0 0 0-2.25-2.25h-1.5A2.25 2.25 0 0 0 9 6.75v1.5a2.25 2.25 0 0 0 2.25 2.25Z" />
-                            <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM6 6a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 6 6Z" clip-rule="evenodd" />
-                            <path d="M12 2.25a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM18 6a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z" />
-                            <path fill-rule="evenodd" d="M16.896 14.936a7.5 7.5 0 1 0-9.792 0l-3.268 3.268a1.5 1.5 0 0 0 1.06 2.564h14.736a1.5 1.5 0 0 0 1.06-2.564l-3.268-3.268Zm-5.325 3.064c-.456-.456-.684-1.03-.684-1.636 0-1.29.98-2.316 2.185-2.528.188.081.382.127.584.127h.584c.202 0 .396-.046.584-.127 1.205.212 2.185 1.238 2.185 2.528 0 .606-.228 1.18-.684 1.636-.456.456-1.03.684-1.636.684-.606 0-1.18-.228-1.636-.684Z" clip-rule="evenodd" />
-                        </svg>
-                        <p class="text-gray-600">Madrid – Spain</p>
+                    <!-- Card for Sensory Evolution -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
+                        <h3 class="text-2xl font-semibold text-gray-800">Evolución Sensorial</h3>
+                        <p class="mt-4 text-gray-600">
+                            Realza los aromas y sabores sin aditivos ni químicos. Experimenta una transformación aromática con nuevas notas (ahumadas, de frutos secos, caramelizadas), un cambio en la textura y evolución visual.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- Contact Section (Spanish) -->
+            <section id="contact-es" class="bg-white section-padding rounded-xl shadow-lg">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                        Contacto
+                    </h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto md:mx-0">
+                        Ponte en contacto para obtener más información sobre nuestro proceso y cómo podemos transformar tus productos.
+                    </p>
+                </div>
+                <div class="mt-8 flex flex-col md:flex-row md:space-x-8 items-center md:items-start">
+                    <div class="space-y-4 text-center md:text-left">
+                        <div class="flex items-center space-x-2 justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-500">
+                                <path fill-rule="evenodd" d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.695 2.621a3 3 0 0 1-2.61 0L1.5 8.67Z" clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M1.5 8.67V6a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v2.67l-7.213 2.165a4.5 4.5 0 0 0-3.935 0L1.5 8.67Z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-gray-600">ramosnavas@gmail.com</p>
+                        </div>
+                        <div class="flex items-center space-x-2 justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-500">
+                                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.373a3 3 0 0 1 3 3v1.674c0 .717-.262 1.424-.766 1.968L6.726 9.593a1.868 1.868 0 0 0-.026 2.052c.41.97 1.448 1.57 2.552 1.854 1.258.322 2.65.254 3.963-.122a.896.896 0 0 0 .801-.621l1.15-3.022a1.875 1.875 0 0 1 1.637-1.015h1.725a3 3 0 0 1 3 3v1.5a1.5 1.5 0 0 1-1.5 1.5H15a1.5 1.5 0 0 0-1.5 1.5c0 2.205 1.155 4.237 2.946 5.564a2.535 2.535 0 0 1 1.054.896c.273.666.273 1.341 0 2.007a2.534 2.534 0 0 1-1.054.896 9.774 9.774 0 0 1-4.73 1.343c-3.15.35-6.31-.05-9.358-1.464a2.541 2.541 0 0 1-1.054-.896c-.273-.666-.273-1.341 0-2.007a2.534 2.534 0 0 1 1.054-.896c1.79-1.327 2.945-3.359 2.945-5.564a1.5 1.5 0 0 0-1.5-1.5H4.5a1.5 1.5 0 0 1-1.5-1.5V4.5Z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-gray-600">+34 643 153 687</p>
+                        </div>
+                        <div class="flex items-center space-x-2 justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-500">
+                                <path d="M11.25 10.5h1.5A2.25 2.25 0 0 0 15 8.25V6.75a2.25 2.25 0 0 0-2.25-2.25h-1.5A2.25 2.25 0 0 0 9 6.75v1.5a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                <path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM6 6a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 6 6Z" clip-rule="evenodd" />
+                                <path d="M12 2.25a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM18 6a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z" />
+                                <path fill-rule="evenodd" d="M16.896 14.936a7.5 7.5 0 1 0-9.792 0l-3.268 3.268a1.5 1.5 0 0 0 1.06 2.564h14.736a1.5 1.5 0 0 0 1.06-2.564l-3.268-3.268Zm-5.325 3.064c-.456-.456-.684-1.03-.684-1.636 0-1.29.98-2.316 2.185-2.528.188.081.382.127.584.127h.584c.202 0 .396-.046.584-.127 1.205.212 2.185 1.238 2.185 2.528 0 .606-.228 1.18-.684 1.636-.456.456-1.03.684-1.636.684-.606 0-1.18-.228-1.636-.684Z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-gray-600">Madrid – Spain</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 mt-12 md:mt-16">
         <div class="section-padding text-center text-sm text-gray-400">
-            &copy; 2024 Chrysalis Reactor. All Rights Reserved.
+            <span id="footer-text-en">&copy; 2024 Chrysalis Reactor. All Rights Reserved.</span>
+            <span id="footer-text-es" class="hidden">&copy; 2024 Chrysalis Reactor. Todos los derechos reservados.</span>
         </div>
     </footer>
 
+    <!-- JavaScript for language toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langToggle = document.getElementById('lang-toggle');
+            const enContent = document.getElementById('en-content');
+            const esContent = document.getElementById('es-content');
+
+            // Function to set language based on a given language code
+            const setLanguage = (lang) => {
+                if (lang === 'en') {
+                    enContent.classList.remove('hidden');
+                    esContent.classList.add('hidden');
+                    langToggle.textContent = 'ES';
+                } else {
+                    enContent.classList.add('hidden');
+                    esContent.classList.remove('hidden');
+                    langToggle.textContent = 'EN';
+                }
+            };
+
+            // Toggle language on button click
+            langToggle.addEventListener('click', () => {
+                const currentLang = langToggle.textContent === 'ES' ? 'en' : 'es';
+                setLanguage(currentLang === 'en' ? 'es' : 'en');
+            });
+        });
+    </script>
 </body>
 </html>
